@@ -6,9 +6,11 @@ import { Locator, Page, expect } from '@playwright/test'
 export class LoginPage {
 
   private readonly usernameField: Locator
+  private readonly title: Locator
 
   constructor(private readonly page: Page) {
     this.usernameField = this.page.getByTestId('username')
+    this.title = this.page.getByTestId('title')
   }
 
   async goto(): Promise<void> {
@@ -23,6 +25,10 @@ export class LoginPage {
 
   getUsernameField(): Locator {
     return this.usernameField
+  }
+
+  async getTitle(): Promise<string> {
+    return await this.title.innerText()
   }
 
   async expectErrorContaining(text: string): Promise<void> {

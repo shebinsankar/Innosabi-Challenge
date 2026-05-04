@@ -18,10 +18,11 @@ test.describe('Smoke', () => {
   })
 
   test('standard_user can log out', async ({ page }) => {
+    const loginPage = new LoginPage(page)
+    expect(await loginPage.getTitle()).toEqual('Products')
     const sideMenu = new SideMenu(page)
     await sideMenu.openSideMenu()
     await sideMenu.logout()
-    const loginPage = new LoginPage(page)
     await expect(loginPage.getUsernameField()).toBeVisible()
   })
 })
