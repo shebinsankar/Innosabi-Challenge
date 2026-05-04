@@ -1,9 +1,9 @@
 My Tasks
 
 ## Task 2 
-Test 1 : The expected text or badge count was 1, but the test was adding 2 items to the cart as actual.
-Test 2 : During the parse float step, the price text was not properly cleaned. It identifies the '$' sign first and results in NaN value.
-Test 3 : The "Remove" button is not active for the "error_user" in inventory page, thus not removing the cart badge. The test name should be changed
+1. The expected text or badge count was 1, but the test was adding 2 items to the cart as actual.
+2. During the parse float step, the price text was not properly cleaned. It identifies the '$' sign first and results in NaN value.
+3. The "Remove" button is not active for the "error_user" in inventory page, thus not removing the cart badge. The test name should be changed.
 
 ## Task 3
 1. Renamed method names to 'addItemToCart(), removeItemFromCart(), goToCart(), sortItems()' so that they are more meaningful.
