@@ -17,9 +17,9 @@ My Tasks
 ## Task 4
 Identified the flakiness is due to floating point issue when asserting the total. And this fails for certain combinations with decimal points. Fixed it by rounding the value to two decimal points.
 
-Diagnosis: First I ran the test in serial and parallel runs to identify the flakiness. Checked for any delay in app causing the issue. Changed the test data to verify the floating point issue.
+Diagnosis: First I ran the test in serial and parallel runs to identify the flakiness. Checked for any delay in app, any dependency in the tests, version dependency. Changed the test data to verify the floating point issue.
 
-Also we can have stable tests by picking the products without hardcoded values (addItemToCart('Sauce Labs Bike Light')). Instead pick product details in an array list(name, price) and persist it for validating till the end of test.
+Also we can have stable tests by picking the products without hardcoded values (addItemToCart('Sauce Labs Bike Light')). Instead pick product details in an array list(name, price) and persist it for validating till the end of test. Use isVisible() methods so that actions happen only when elements are ready.
 
 ## Task 5
 I would implement logout feature also in the smoke suite, it is important to check the user session logout is working properly.
