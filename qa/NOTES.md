@@ -16,6 +16,7 @@ My Tasks
 
 ## Task 4
 Identified the flakiness is due to floating point issue when asserting the total. And this fails for certain combinations with decimal points. Fixed it by rounding the value to two decimal points.
+Also the regex can be improved "/\$([\d,]+\.?\d*)/". It should not break if comma in total.
 
 Diagnosis: First I ran the test in serial and parallel runs to identify the flakiness. Checked for any delay in app, any dependency in the tests, version dependency. Changed the test data to verify the floating point issue.
 
